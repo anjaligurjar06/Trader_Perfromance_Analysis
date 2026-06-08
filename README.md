@@ -63,17 +63,6 @@ Columns:
 - Extracted trading date.
 - Merged with sentiment data using date.
 
-```python
-sentiment['date'] = pd.to_datetime(sentiment['date']).dt.normalize()
-
-trades['Timestamp IST'] = pd.to_datetime(
-    trades['Timestamp IST'],
-    format='%d-%m-%Y %H:%M'
-)
-
-trades['date'] = trades['Timestamp IST'].dt.normalize()
-```
-
 ---
 
 ## Analysis Performed
